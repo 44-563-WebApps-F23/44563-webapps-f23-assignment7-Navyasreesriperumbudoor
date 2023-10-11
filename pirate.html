@@ -1,216 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Assignment 7</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <title>Pirate Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <style>
+       
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            color: darkblue;
+            font-family:cursive;
+            
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 16px;
+            background-color: ivory;
+        }
+
+        .lead {
+            font-weight: 500;
+        }
+
+        .button {
+            background-color: black;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+        }
+    </style>
 </head>
+
 <body>
+    <h1>Find the treasure by Navyasree Sriperumbudoor</h1>
+    <p class="lead" style="background-color: yellow;"><b>Click on the locations to search for treasure, beware the traps</b></p>
+    <p id="locations" class="lead" style=" background-color: skyblue"><b>Number of locations checked is zero.</b></p>
+    <p id="penalty" class="lead" style="background-color: orange;"><b>Penalty is zero.</b></p>
+    <p class="lead" style="background-color:green" onclick="help()"><b>Click for help.</b></p>
+    <p id="help" class="lead" style="background-color: blue;" style="font-weight: 500;"><b>Help report.</b></p>
+    <br>
+    
+    <br>
+    <br>
 
-<div class="container-fluid">
-  <h1 style="font-family: cursive;color:blue">Find the treasure by Navyasree Sriperumbudoor</h1>
-  <br>
-  <div class="container-fluid">       
-    <div class="d-inline p-2 bg-info" id = "locations">Number of locations checked is zero.</div>
-    <div class="d-inline p-2 bg-warning" style="color: black;" id = "penalty">Penalty is zero.</div>
-    <div class="d-inline p-2 bg-success"style="color: black;">Click for help.</div><br><br>
-    <div class="d-inline p-2 bg-danger" style="color: black;" id = "help">Help report</div>
-    <div class="d-inline p-2 bg-primary">Click on the locations to search for treasure, beware the traps</div>
-</div>
-<br><br>
-<div class="row">
-    <div class="col-sm-1">
-        <img id="image1" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
+    <div class="container">
+        <div class="image-row d-flex justify-content-center">
+            <div>
+                <img id="1" onclick="check(0)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="2" onclick="check(1)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="3" onclick="check(2)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="4" onclick="check(3)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="5" onclick="check(4)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+        </div>
+        <div class="image-row d-flex justify-content-center">
+            <div>
+                <img id="6" onclick="check(5)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="7" onclick="check(6)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="8" onclick="check(7)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="9" onclick="check(8)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="10" onclick="check(9)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+        </div>
+        <div class="image-row d-flex justify-content-center">
+            <div>
+                <img id="11" onclick="check(10)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="12" onclick="check(11)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="13" onclick="check(12)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="14" onclick="check(13)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="15" onclick="check(14)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+        </div>
+        <div class="image-row d-flex justify-content-center">
+            <div>
+                <img id="16" onclick="check(15)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="17" onclick="check(16)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="18" onclick="check(17)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="19" onclick="check(18)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="20" onclick="check(19)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+        </div>
+        <div class="image-row d-flex justify-content-center">
+            <div>
+                <img id="21" onclick="check(20)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div class="col">
+            <div>
+                <img id="22" onclick="check(21)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="23" onclick="check(22)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="24" onclick="check(23)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+            <div>
+                <img id="25" onclick="check(24)" src="Treasure hunt.jpg" alt="treasure" height="150" width="150">
+            </div>
+        </div>
     </div>
-    <div class="col-sm-1">
-        <img  id="image2" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image3" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image4" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image5" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-1">
-        <img id="image6" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image7" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image8" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image9" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image10" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-1">
-        <img id="image11" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image12" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image13" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image14" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image15" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-1">
-        <img id="image16" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image17" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image18" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image19" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image20" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-1">
-        <img id="image21" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image22" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image23" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image24" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-    <div class="col-sm-1">
-        <img id="image25" src="Treasure hunt.jpg" alt="Treasure Location" style="height: 100%; width: 120%;padding-bottom: 5%;">
-    </div>
-</div>
-
-<!-- Place this code inside a <script> tag in your HTML file, typically just before the closing </body> tag -->
     <script>
-        // Step 4: Declare an array of unique IDs
-        var ids = ["imag1", "image2", "image3", "image4","image5","image6","image7", "image8", "image9","image10","image11","image12","image13",
-        "image14","image15","image16","image17","image18","image19","image20","image21","image22","image23","image24","image25"]; // Replace with your actual IDs
-        
-        for (let i = 1; i < 25; i++) {
-        const image = document.getElementById(`image${i + 1}`);
-        
-        // Assign the onclick property with the check function and the current index
-        image.onclick = function() {
-            check(i);
-        };
-    }
-
-        // Step 5: Declare variables
+        var ids = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
         var checkCount = 0;
         var penalty = 0;
         var lastCheck = 0;
-        var treasureLocation = 5;
-        var trapLocation = 6;
+        var treasureLocation = Math.floor(Math.random() * 25);
+        var trapLocation = Math.floor(Math.random() * 25);
         var gameOver = false;
-    
-        // Step 11: Create the function check(position)
         function check(position) {
-            // Step 11a: If the game is over, do nothing
-            if (gameOver) {
-                return;
+            if (gameOver != true) {
+                if (position == treasureLocation) {
+                    document.getElementById(ids[position]).setAttribute("src", "Treasure.jpg");
+                    gameOver = true;
+                    penalty = penalty - 3;
+                }
+                else if (position == trapLocation) {
+                    document.getElementById(ids[position]).setAttribute("src", "Trap.jpg");
+                    gameOver = true;
+                    penalty = penalty + 4;
+                }
+                else {
+                    document.getElementById(ids[position]).setAttribute("src", "Pirates.jpg");
+                    penalty = penalty + 1;
+                }
+                checkCount++;
+                document.getElementById("locations").innerHTML = "Number of locations checked is " + checkCount + ".";
+                document.getElementById("penalty").innerHTML = "Penalty is " + penalty + ".";
+                lastCheck = position;
             }
-            
-            // Step 11b: Get the ID for the image
-            var id = ids[position];
-            
-            // Step 11c: Get the image element
-            var img = document.getElementById(id);
-            
-            // Step 11d: Change the image source based on the position
-            if (position === treasureLocation) {
-                img.src = "Treasure.jpg"; // Replace with your actual image source
-            } else if (position === trapLocation) {
-                img.src = "Trap.jpg"; // Replace with your actual image source
-            } else {
-                img.src = "Pirates.jpg"; // Replace with your actual image source
-            }
-            
-            // Step 11e and 11f: Update checkCount and penalty
-            checkCount++;
-            penalty++;
-            
-            // Step 11g: Update the text on the element with id "locations"
-            document.getElementById("locations").textContent = "Number of locations checked is " + checkCount + ".";
-            
-            // Step 11h: If the position is the treasure, set gameOver to true and subtract three from the penalty
-            if (position === treasureLocation) {
-                gameOver = true;
-                penalty -= 3;
-            }
-            
-            // Step 11i: If the position is the trap, set gameOver to true and add four to the penalty
-            if (position === trapLocation) {
-                gameOver = true;
-                penalty += 4;
-            }
-            
-            // Step 11j and 11k: Update the text on the element with id "penalty" and update lastCheck
-            document.getElementById("penalty").textContent = "Penalty is " + penalty + ".";
-            lastCheck = position;
         }
-    
-        // Step 12: Create the function help()
         function help() {
-            // Step 12a: Compute row and column for treasure and last location
-            var treasureRow = Math.floor(treasureLocation / 5);
-            var treasureCol = treasureLocation % 5;
-            var lastRow = Math.floor(lastCheck / 5);
-            var lastCol = lastCheck % 5;
-            
-            // Step 12b and 12c: Determine help result
-            var result = "";
-            if (Math.abs(treasureRow - lastRow) + Math.abs(treasureCol - lastCol) === 1) {
+            let lastRow = parseInt((lastCheck / 5), 10);
+            let treasureRow = parseInt((treasureLocation / 5), 10);
+            let result = " ";
+            let lastCol = lastCheck % 5;
+            let treasureCol = treasureLocation % 5;
+            let rowDifference = 0;
+            let colDifference = 0;
+            if (treasureRow > lastRow) {
+                rowDifference = treasureRow - lastRow;
+            }
+            else {
+                rowDifference = lastRow - treasureRow;
+            }
+            if (treasureCol > lastCol) {
+                colDifference = treasureCol - lastCol;
+            }
+            else {
+                colDifference = lastCol - treasureCol;
+            }
+            if (lastRow - treasureRow == 1 || lastRow - treasureRow == 1 || lastCol - treasureCol == 1 || lastCol - treasureCol == -1) {
                 result = "Can smell it";
-            } else if (Math.abs(treasureRow - lastRow) + Math.abs(treasureCol - lastCol) === 2) {
+            }
+            else if (rowDifference + colDifference == 2) {
                 result = "Close Matie";
-            } else {
+            }
+            else {
                 result = "Step Faster";
             }
-            
-            // Step 12e and 12f: Update penalty and the text on the element with id "help"
-            penalty += 2;
-            document.getElementById("penalty").textContent = "Penalty is " + penalty + ".";
-            document.getElementById("help").textContent = result;
+            penalty = penalty + 2;
+            document.getElementById("penalty").innerHTML = "Penalty is " + penalty + ".";
+            document.getElementById("help").innerHTML = result;
         }
-    
-        // Step 13: Set the onclick property for the "Click for help" button
-        document.getElementById("helpButton").onclick = help;
+       
     </script>
-    
-
-
-
 </body>
+
 </html>
