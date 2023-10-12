@@ -44,7 +44,7 @@
     <p class="lead" style="background-color:green" onclick="help()"><b>Click for help.</b></p>
     <p id="help" class="lead" style="background-color: blue;"><b>Help report.</b></p>
     <br>
-    <button type="button" class="button" onclick="reset()"><b>RESET</b></button>
+    <button type="button" class="button" onclick="newgame()"><b>NEW GAME</b></button>
     <br>
     <div class="container">
         <div class="image-row d-flex justify-content-center">
@@ -196,7 +196,7 @@
             document.getElementById("penalty").innerHTML = "Penalty is " + penalty + ".";
             document.getElementById("help").innerHTML = result;
         }
-        function reset() {
+        function newgame() {
             treasureLocation = Math.floor(Math.random() * 25);
             trapLocation = Math.floor(Math.random() * 25);
             checkCount = 0
