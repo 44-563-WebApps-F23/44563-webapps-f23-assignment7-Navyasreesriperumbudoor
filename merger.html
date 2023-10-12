@@ -17,7 +17,7 @@
 		.flex-container>div {
 			background-color: whitesmoke;
 			margin: 10px;
-			padding: 10px;
+			
 			font-size: 30px;
 		}
 		@media (max-width: 600px) {
@@ -38,11 +38,11 @@
 		<div class="merger">row item 2</div>
 		<div class="merger">row item 3</div>
 	</div>
-	<p> Press the button to create an new element of type div and then add it to the container.
-	</p>
+	
 	<button type="button" class="btn btn-primary" onclick="makeNewDiv()">Add end</button>
 	<button type="button" class="btn btn-danger" onclick="addFront()">Add front</button>
 	<button type="button" class="btn btn-info" onclick="remove()">Remove</button>
+	<button type="button" class="btn btn-success" onclick="swap()">Swap</button>
 	
 </body>
 <script>
@@ -70,6 +70,13 @@
 		let container = document.getElementById('target')
 		container.insertBefore(element, container.firstChild)
 	}
+	function swap(){
+        let mergerItems = document.getElementsByClassName("merger");
+        let length = mergerItems.length;
+        let mergerItem = document.getElementsByClassName("merger")[Math.floor(Math.random() * length)];
+        let container = document.getElementById("target");
+        container.insertBefore(mergerItem, container.firstChild);
+    }
 	
 </script>
 
